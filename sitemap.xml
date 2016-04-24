@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jasonxu11.github.io/about/index.html</loc>
+    
+    <lastmod>2016-04-24T13:36:52.488Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jasonxu11.github.io/tags/index.html</loc>
     
-    <lastmod>2016-04-24T11:17:15.711Z</lastmod>
+    <lastmod>2016-04-24T11:53:17.407Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jasonxu11.github.io/categories/index.html</loc>
+    
+    <lastmod>2016-04-24T11:53:08.573Z</lastmod>
     
   </url>
   
