@@ -3,36 +3,26 @@
 
 
     
-    
-    
-    
   <url>
-    <loc>https://jasonxu11.github.io/2016/04/22/testblog/</loc>
-    <lastmod>2016-04-22T06:06:23.799Z</lastmod>
+    <loc>https://jasonxu11.github.io/2016/04/25/firstblog/</loc>
+    <lastmod>2016-04-25T14:56:41.561Z</lastmod>
     <data>
         <display>
-        <title>测试博客</title>
-        <pubTime>2016-04-22T04:43:06.000Z</pubTime>
+        <title>新的站点、新的起点</title>
+        <pubTime>2016-04-25T13:30:42.000Z</pubTime>
         
+        <tag>NodeJs、hexo</tag>
+         
          
            
+             
+              <breadCrumb title="NodeJs" url="https://jasonxu11.github.io/categories/NodeJs/"/>
+          
         </display>
     </data>
     </url>
 
     
-  <url>
-    <loc>https://jasonxu11.github.io/2016/04/21/firstblog/</loc>
-    <lastmod>2016-04-21T06:44:28.773Z</lastmod>
-    <data>
-        <display>
-        <title>公告</title>
-        <pubTime>2016-04-21T06:39:08.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
+    
+    
 </urlset>
