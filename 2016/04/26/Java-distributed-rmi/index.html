@@ -88,7 +88,7 @@
 <meta property="og:url" content="https://jasonxu11.github.io/2016/04/26/Java-distributed-rmi/index.html">
 <meta property="og:site_name" content="JasonXu-追梦">
 <meta property="og:description" content="RMI概述&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在Java中实现远程调用的方式主要有两种技术，一个是RMI，一个是webservice,本次主要讲解RMI技术。RMI是Remote Method Invocation缩写,是Java用于透明远程调用的重要机制，它使客户机上运行的程序可以调用远程服务器上的对象，在远程调用中，客户端只要拥有服务端提供的接口，通过此接口实现对远程服务端的调用，">
-<meta property="og:updated_time" content="2016-04-27T15:45:41.038Z">
+<meta property="og:updated_time" content="2016-04-27T15:54:59.847Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java分布式通信之RMI">
 <meta name="twitter:description" content="RMI概述&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在Java中实现远程调用的方式主要有两种技术，一个是RMI，一个是webservice,本次主要讲解RMI技术。RMI是Remote Method Invocation缩写,是Java用于透明远程调用的重要机制，它使客户机上运行的程序可以调用远程服务器上的对象，在远程调用中，客户端只要拥有服务端提供的接口，通过此接口实现对远程服务端的调用，">
@@ -369,7 +369,7 @@
       
 
       
-        <h5 id="RMI概述"><a href="#RMI概述" class="headerlink" title="RMI概述"></a>RMI概述</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;在Java中实现远程调用的方式主要有两种技术，一个是RMI，一个是webservice,本次主要讲解RMI技术。RMI是Remote Method Invocation缩写,是Java用于透明远程调用的重要机制，它使客户机上运行的程序可以调用远程服务器上的对象，在远程调用中，客户端只要拥有服务端提供的接口，通过此接口实现对远程服务端的调用，它的目的在于对开发人员屏蔽横跨不同JVM和网络连接等细节，使得分布在不同JVM上的对象像是存在于一个统一的JVM中一样，可以很方便的互相通讯。</p>
+        <h5 id="RMI概述"><a href="#RMI概述" class="headerlink" title="RMI概述"></a>RMI概述</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;在Java中实现远程调用的方式主要有两种技术，一个是RMI，一个是webservice,本次主要讲解RMI技术。RMI是Remote Method Invocation缩写,是Java用于透明远程调用的重要机制，它使客户机上运行的程序可以调用远程服务器上的对象，在远程调用中，客户端只要拥有服务端提供的接口，通过此接口实现对远程服务端的调用，它的目的在于对开发人员屏蔽横跨不同JVM和网络连接等细节，使得分布在不同JVM上的对象像是存在于一个统一的JVM中一样，可以很方便的互相通讯。<br><a id="more"></a></p>
 <hr>
 <h5 id="实现机制"><a href="#实现机制" class="headerlink" title="实现机制"></a>实现机制</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;RMI 服务端通过启动注册对象监听在某一端口上对外提供服务的接口，接口的实现类在注册对象上注册并命名。客户端通过代理的访问实现对服务端接口的访问，即在客户端需持有该接口，客户端将要访问服务端的对象的命名、方法名和参数封装成一个对象，序列化后传输到服务端，服务端接受到请求后解析对象的命名、方法和参数，通过命名从已在服务端注册的对象里查找，之后结合要访问的方法，利用反射技术找到对应的对象实例，传入参数完成对服务端实例的调用。<br>&nbsp;&nbsp;&nbsp;&nbsp;使用RMI时服务端的接口要实现remote接口，接口里的每个方法必须抛出RemoteException，服务端的业务类实现此接口来提供相关的业务功能，然后通过UnicastRemoteObject.exportObject讲此对象绑定至某个端口，最后将此对象注册至本地的LocateRegistry并命名，下面举个简单例子。</p>
 <hr>
@@ -530,7 +530,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -538,7 +538,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -547,7 +547,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
