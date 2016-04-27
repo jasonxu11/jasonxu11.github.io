@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java,RMI," />
 
 
 
@@ -82,15 +82,16 @@
 
 
 
-<meta name="description" content="java,android,架构,设计,SAP,BO,HANA">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JasonXu-追梦">
-<meta property="og:url" content="https://jasonxu11.github.io/index.html">
+<meta name="description" content="RMI概述&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在Java中实现远程调用的方式主要有两种技术，一个是RMI，一个是webservice,本次主要讲解RMI技术。RMI是Remote Method Invocation缩写,是Java用于透明远程调用的重要机制，它使客户机上运行的程序可以调用远程服务器上的对象，在远程调用中，客户端只要拥有服务端提供的接口，通过此接口实现对远程服务端的调用，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java分布式通信之RMI">
+<meta property="og:url" content="https://jasonxu11.github.io/2016/04/26/Java-distributed-rmi/index.html">
 <meta property="og:site_name" content="JasonXu-追梦">
-<meta property="og:description" content="java,android,架构,设计,SAP,BO,HANA">
+<meta property="og:description" content="RMI概述&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在Java中实现远程调用的方式主要有两种技术，一个是RMI，一个是webservice,本次主要讲解RMI技术。RMI是Remote Method Invocation缩写,是Java用于透明远程调用的重要机制，它使客户机上运行的程序可以调用远程服务器上的对象，在远程调用中，客户端只要拥有服务端提供的接口，通过此接口实现对远程服务端的调用，">
+<meta property="og:updated_time" content="2016-04-27T15:45:41.038Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JasonXu-追梦">
-<meta name="twitter:description" content="java,android,架构,设计,SAP,BO,HANA">
+<meta name="twitter:title" content="Java分布式通信之RMI">
+<meta name="twitter:description" content="RMI概述&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在Java中实现远程调用的方式主要有两种技术，一个是RMI，一个是webservice,本次主要讲解RMI技术。RMI是Remote Method Invocation缩写,是Java用于透明远程调用的重要机制，它使客户机上运行的程序可以调用远程服务器上的对象，在远程调用中，客户端只要拥有服务端提供的接口，通过此接口实现对远程服务端的调用，">
 
 
 
@@ -108,7 +109,7 @@
   };
 </script>
 
-  <title> JasonXu-追梦 </title>
+  <title> Java分布式通信之RMI | JasonXu-追梦 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -148,9 +149,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -277,9 +276,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -299,10 +298,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/04/26/Java-distributed-rmi/" itemprop="url">
-                  Java分布式通信之RMI
-                </a>
+                Java分布式通信之RMI
               
             
           </h1>
@@ -357,6 +353,11 @@
           
 
           
+              &nbsp; | &nbsp;
+              <span class="page-pv">本文总阅读量
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+              </span>
+          
         </div>
       </header>
     
@@ -368,9 +369,7 @@
       
 
       
-        
-          
-            <h5 id="RMI概述"><a href="#RMI概述" class="headerlink" title="RMI概述"></a>RMI概述</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;在Java中实现远程调用的方式主要有两种技术，一个是RMI，一个是webservice,本次主要讲解RMI技术。RMI是Remote Method Invocation缩写,是Java用于透明远程调用的重要机制，它使客户机上运行的程序可以调用远程服务器上的对象，在远程调用中，客户端只要拥有服务端提供的接口，通过此接口实现对远程服务端的调用，它的目的在于对开发人员屏蔽横跨不同JVM和网络连接等细节，使得分布在不同JVM上的对象像是存在于一个统一的JVM中一样，可以很方便的互相通讯。</p>
+        <h5 id="RMI概述"><a href="#RMI概述" class="headerlink" title="RMI概述"></a>RMI概述</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;在Java中实现远程调用的方式主要有两种技术，一个是RMI，一个是webservice,本次主要讲解RMI技术。RMI是Remote Method Invocation缩写,是Java用于透明远程调用的重要机制，它使客户机上运行的程序可以调用远程服务器上的对象，在远程调用中，客户端只要拥有服务端提供的接口，通过此接口实现对远程服务端的调用，它的目的在于对开发人员屏蔽横跨不同JVM和网络连接等细节，使得分布在不同JVM上的对象像是存在于一个统一的JVM中一样，可以很方便的互相通讯。</p>
 <hr>
 <h5 id="实现机制"><a href="#实现机制" class="headerlink" title="实现机制"></a>实现机制</h5><p>&nbsp;&nbsp;&nbsp;&nbsp;RMI 服务端通过启动注册对象监听在某一端口上对外提供服务的接口，接口的实现类在注册对象上注册并命名。客户端通过代理的访问实现对服务端接口的访问，即在客户端需持有该接口，客户端将要访问服务端的对象的命名、方法名和参数封装成一个对象，序列化后传输到服务端，服务端接受到请求后解析对象的命名、方法和参数，通过命名从已在服务端注册的对象里查找，之后结合要访问的方法，利用反射技术找到对应的对象实例，传入参数完成对服务端实例的调用。<br>&nbsp;&nbsp;&nbsp;&nbsp;使用RMI时服务端的接口要实现remote接口，接口里的每个方法必须抛出RemoteException，服务端的业务类实现此接口来提供相关的业务功能，然后通过UnicastRemoteObject.exportObject讲此对象绑定至某个端口，最后将此对象注册至本地的LocateRegistry并命名，下面举个简单例子。</p>
 <hr>
@@ -385,157 +384,97 @@
 </blockquote>
 <hr>
 
-          
-        
       
     </div>
     
     <div>
       
+        
+      
     </div>
 
     <div>
+      
+        
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+    <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onMouseOut="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/weixin.png" alt="JasonXu WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>微信打赏</p>
+      </div>
+    
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/uploads/chifubao.png" alt="JasonXu Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>支付宝打赏</p>
+      </div>
+    
+  </div>
+</div>
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/25/firstblog/" itemprop="url">
-                  新的站点、新的起点
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-25T21:30:42+08:00" content="2016-04-25">
-              2016-04-25
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/NodeJs/" itemprop="url" rel="index">
-                    <span itemprop="name">NodeJs</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/25/firstblog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/25/firstblog/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/java-RMI/" rel="tag">#java,RMI</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p><img src="http://7xt6ul.com2.z0.glb.clouddn.com/%E6%89%AC%E5%B8%86%E8%B5%B7%E8%88%AA.jpg" alt="扬帆起航"><br>经过两晚的倒腾，终于完成了hexo基于github的搭建，之前一直在<a href="http://blog.csdn.net/xufaxi" title="我的CSDN博客" target="_blank" rel="external">CSDN</a>上写博客，在工作的前期也坚持了一段时间，后来是越发的少了，猛然间看到各位年轻于我们的小伙伴们突军而起，倍感鸭梨。其实每个coder在工作中无论是从事项目还是研发，都有不少值得分享的经验，基于实战都是干货，写博客的目的，一是在与分享，我们每个IT从业者都应该乐于分享，我们应该庆幸我们生活在互联网如此发达的今天，我们可以从网上找到为我们解惑的答案，我们都从statckoverflow、CSDN、ITEYE、CNBlog等诸多大牛和小神那取得过真经，也从github、OSchina练得葵花宝典、寻的存在感和价值，我们的知识来源于社会，那么就不要吝啬吧，分享对自己也是一种成长。二是在于经验备份，哈好记性不如烂笔头，越是年纪大，越是感觉虚…，每次学过、经历过的技术疑难点，当时是搞的清楚了，过了一段时间，总得努力回忆下，此处应该会有嘘声…。哈不多扯了，To me. this is a new starting point，come on！</p>
-<p><em>如果有使用hexo搭建博客存在问题的小伙伴大家可以多多交流</em></p>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/25/firstblog/" rel="next" title="新的站点、新的起点">
+                <i class="fa fa-chevron-left"></i> 新的站点、新的起点
+              </a>
+            
+          </div>
 
-          
-        
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/04/26/Java-distributed-rmi/"
+     data-title="Java分布式通信之RMI"
+     data-content=""
+     data-url="https://jasonxu11.github.io/2016/04/26/Java-distributed-rmi/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -543,6 +482,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/26/Java-distributed-rmi/"
+           data-title="Java分布式通信之RMI" data-url="https://jasonxu11.github.io/2016/04/26/Java-distributed-rmi/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -562,8 +509,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -620,6 +576,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#RMI概述"><span class="nav-number">1.</span> <span class="nav-text">RMI概述</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#实现机制"><span class="nav-number">2.</span> <span class="nav-text">实现机制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#示例代码"><span class="nav-number">3.</span> <span class="nav-text">示例代码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -732,6 +699,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
