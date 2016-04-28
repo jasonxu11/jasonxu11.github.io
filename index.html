@@ -735,19 +735,13 @@
 
       
         
-          
-            <h5 id="下载最新版本instantclient"><a href="#下载最新版本instantclient" class="headerlink" title="下载最新版本instantclient"></a>下载最新版本instantclient</h5><p>到Oracle官网下载新版的instantclient，利用这种客户端的方式，不需要在机器上装上Oracle数据库，Oracle数据库体积太大，占据一定的硬盘和内存空间，下载新版本的原因是Oracle的版本都是高版本兼容低版本的。在Oracle官网下载客户端软件，下载完成后解压到指定的目录，以我机器为例解压到：D:\PLSQL_MAPPING\instantclient-basic-win32-11.2.0.1.0\instantclient_11_2<br>备注：注意32位还是64位</p>
-<h5 id="navicat的配置方式"><a href="#navicat的配置方式" class="headerlink" title="navicat的配置方式"></a>navicat的配置方式</h5><p>Navicat premium版是一款支持多种数据库的客户端连接工具，这里就不再赘述，有兴趣百度连接，安装好Navicat后，打开工具，选择菜单栏工具-选项，设置窗口里其他下面的OCI选项，指定OCI Library(oci.dll),这个文件在我们之前解压的路径下，选择指定即可，如下图：<br><img src="http://img.blog.csdn.net/20141209084906727?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQveHVmYXhp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="截图"><br>指定后，新建连接即可。</p>
-<h5 id="PL-SQL-Developer配置"><a href="#PL-SQL-Developer配置" class="headerlink" title="PL/SQL Developer配置"></a>PL/SQL Developer配置</h5><p>安装developer这里也就飘过了，想要让客户端工具连接上远程的数据库，要作以下的配置：<br>1.在解压的目录文件下新建network和admin文件夹，目录层次如下：</p>
-<p>以我的为例：</p>
-<p>D:\PLSQL_MAPPING\instantclient-basic-win32-11.2.0.1.0\instantclient_11_2\network\admin</p>
-<p>在admin的文件夹下新建</p>
-<p>sqlnet.ora和tnsnames.ora文件</p>
-<p>sqlnet.ora内容如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">NAMES.DIRECTORY_PATH= (TNSNAMES, EZCONNECT)</span><br><span class="line"></span><br><span class="line">tnsnames.ora内容如下：</span><br><span class="line"></span><br><span class="line">connectionName=</span><br><span class="line"></span><br><span class="line">  (DESCRIPTION =</span><br><span class="line"></span><br><span class="line">    (ADDRESS = (PROTOCOL = TCP)(HOST =Oracle远程地址)(PORT =1521))</span><br><span class="line"></span><br><span class="line">    (CONNECT_DATA =</span><br><span class="line"></span><br><span class="line">      (SERVER = DEDICATED)</span><br><span class="line"></span><br><span class="line">      (SERVICE_NAME =服务名，如：orcl)</span><br><span class="line"></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">  )</span><br></pre></td></tr></table></figure></p>
-<p>2.设置Oracle的客户端环境变量，ORACLE_HOME=D:\PLSQL_MAPPING\instantclient-basic-win32-11.2.0.1.0\instantclient_11_2，环境变量如何配置这个也飘过吧……</p>
-<p>OK，运行你的工具试试看吧!</p>
-
-          
+          <h5 id="下载最新版本instantclient"><a href="#下载最新版本instantclient" class="headerlink" title="下载最新版本instantclient"></a>下载最新版本instantclient</h5><p>到Oracle官网下载新版的instantclient，利用这种客户端的方式，不需要在机器上装上Oracle数据库，Oracle数据库体积太大，占据一定的硬盘和内存空间，下载新版本的原因是Oracle的版本都是高版本兼容低版本的。在Oracle官网下载客户端软件，下载完成后解压到指定的目录，以我机器为例解压到：D:\PLSQL_MAPPING\instantclient-basic-win32-11.2.0.1.0\instantclient_11_2<br>备注：注意32位还是64位</p>
+<h5 id="navicat的配置方式"><a href="#navicat的配置方式" class="headerlink" title="navicat的配置方式"></a>navicat的配置方式</h5><p>Navicat premium版是一款支持多种数据库的客户端连接工具，这里就不再赘述，有兴趣百度连接，安装好Navicat后，打开工具，选择菜单栏工具-选项，设置窗口里其他下面的OCI选项，指定OCI Library(oci.dll),这个文件在我们之前解压的路径下，选择指定即可，如下图：<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2014/12/09/oracle-client-config/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>

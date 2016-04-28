@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://jasonxu11.github.io/2014/12/09/oracle-client-config/</loc>
+    <lastmod>2016-04-28T09:08:35.816Z</lastmod>
+    <data>
+        <display>
+        <title>Oracle客户端工具instantclient配置【Navicat、PL/SQL Developer】</title>
+        <pubTime>2014-12-09T00:46:00.000Z</pubTime>
+        
+        <tag>Oracle</tag>
+         
+         
+           
+             
+              <breadCrumb title="oracle" url="https://jasonxu11.github.io/categories/oracle/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jasonxu11.github.io/2016/04/25/firstblog/</loc>
     <lastmod>2016-04-28T09:05:10.070Z</lastmod>
     <data>
@@ -17,26 +37,6 @@
            
              
               <breadCrumb title="NodeJs" url="https://jasonxu11.github.io/categories/NodeJs/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://jasonxu11.github.io/2014/12/09/oracle-client-config/</loc>
-    <lastmod>2016-04-28T09:03:33.922Z</lastmod>
-    <data>
-        <display>
-        <title>Oracle客户端工具instantclient配置【Navicat、PL/SQL Developer】</title>
-        <pubTime>2014-12-09T00:46:00.000Z</pubTime>
-        
-        <tag>Oracle</tag>
-         
-         
-           
-             
-              <breadCrumb title="oracle" url="https://jasonxu11.github.io/categories/oracle/"/>
           
         </display>
     </data>
